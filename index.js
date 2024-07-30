@@ -13,22 +13,24 @@ const express = require('express');
 const SocketIO = require('socket.io');
 const path = require('path');
 const app = express();
+const admRouter = express.Router();
+require('dotenv').config()
 
-//Configuracion
+//Settings
  
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT);
 
 
-//Trabajar con el Frontend
+//Frontend
 
-app.use(express.static(path.join(__dirname, "frontend")));
+app.use(express.static(path.join(__dirname, "main")));
 
 //Server
 const server = app.listen(app.get('port'), ()=>{
   console.log('Server on Port', app.get('port'));
 });
 
-//Ahora si con socets
+//Now with socket
 const io = SocketIO(server);
 
 io.on('connection', (socket)=> {
@@ -38,3 +40,6 @@ io.on('connection', (socket)=> {
   });
 });
 
+admRouter.get('/new.html', ()=>{
+  console.log("New User")
+});
