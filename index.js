@@ -40,6 +40,7 @@ io.on('connection', (socket)=> {
   });
 });
 
-admRouter.get('/principal/new.html', ()=>{
-  console.log("New User")
+app.get('/test', (req, res)=>{
+  console.log("New User");
+  res.send({ff: "jhj"})
 });
