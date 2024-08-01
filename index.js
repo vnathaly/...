@@ -40,6 +40,6 @@ io.on('connection', (socket)=> {
   });
 });
 
-admRouter.get('/new.html', ()=>{
+admRouter.get('/principal/new.html', ()=>{
   console.log("New User")
 });

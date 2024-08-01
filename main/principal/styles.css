@@ -1,0 +1,26 @@
+* body {
+  background-image: url("textimg.jpg");
+}
+
+.form {
+  background-color: black;
+  border-radius: 5%;
+  color: aliceblue;
+  display: flex;
+  height: 330px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: 70%;
+  width: 300px;
+
+  h1{
+    text-align: center;
+  }
+}
+
+.inputs {
+  border-radius: 5%;
+}
+
+
