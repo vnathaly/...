@@ -44,7 +44,7 @@ body {
   position: absolute;
 } 
 
-#send{
+#button{
   background-color: rgb(77, 121, 241);
   border: none;
   border-radius: 50px;
